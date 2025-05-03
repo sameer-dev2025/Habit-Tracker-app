@@ -3,13 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:habit_tracker/screens/home/add_habit_form.dart';
 import 'package:habit_tracker/services/auth.dart';
 import 'package:habit_tracker/services/database.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:intl/intl.dart';
-import 'package:habit_tracker/services/database.dart';
-import 'package:intl/intl.dart';
 import 'package:habit_tracker/screens/home/widgets/habit_tile.dart';
-import 'package:provider/provider.dart';
 
 class Home extends StatelessWidget {
   Home({super.key});
@@ -107,9 +103,12 @@ class Home extends StatelessWidget {
           );
         },
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () => _showAddHabitSheet(context),
-        child: const Icon(Icons.add),
+      floatingActionButton: Padding(
+        padding: const EdgeInsets.only(bottom: 15, right: 10),
+        child: FloatingActionButton(
+          onPressed: () => _showAddHabitSheet(context),
+          child: const Icon(Icons.add),
+        ),
       ),
     );
   }

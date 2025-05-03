@@ -14,7 +14,6 @@ class AddHabitForm extends StatefulWidget {
 class _AddHabitFormState extends State<AddHabitForm> {
   final _formkey = GlobalKey<FormState>();
   String _habitName = '';
-  // String _habitDescription = '';
   bool loading = false;
 
   void _submit() async {
@@ -29,7 +28,6 @@ class _AddHabitFormState extends State<AddHabitForm> {
       setState(() {
         loading = false;
       });
-      // _formkey.currentState!.save();
 
       //Close bottom sheet
       Navigator.pop(context);
@@ -59,10 +57,6 @@ class _AddHabitFormState extends State<AddHabitForm> {
               });
             },
           ),
-          // TextFormField(
-          //   decoration: const InputDecoration(labelText: 'Description'),
-          //   onSaved: (val) => _habitDescription = val ?? '',
-          // ),
           const SizedBox(height: 16.0),
           loading
               ? Loading()

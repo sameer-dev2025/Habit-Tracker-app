@@ -1,6 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:intl/intl.dart';
 
 class DatabaseService {
   final String uid;
@@ -19,7 +18,6 @@ class DatabaseService {
     return habitCollection.orderBy('createdAt', descending: true).snapshots();
   }
 
-  //add habit method
   Future<void> addHabit(String name) async {
     try {
       await habitCollection.add({

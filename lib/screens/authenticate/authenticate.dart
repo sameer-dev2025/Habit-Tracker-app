@@ -24,6 +24,3 @@ class _AuthenticateState extends State<Authenticate> {
     }
   }
 }
-
-// toggleView: toggleView .Here first toggleView is property name(could be anything).
-// second toggleView is the function name we have created here.

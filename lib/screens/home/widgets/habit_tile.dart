@@ -1,8 +1,6 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:habit_tracker/screens/habit_detail.dart';
 import 'package:habit_tracker/screens/home/edit_habit_form.dart';
-import 'package:habit_tracker/services/database.dart';
 
 class HabitTile extends StatelessWidget {
   final String habitId;
@@ -26,7 +24,6 @@ class HabitTile extends StatelessWidget {
   });
 
   Widget build(BuildContext context) {
-    final user = FirebaseAuth.instance.currentUser!;
     return GestureDetector(
       onTap: () {
         Navigator.push(

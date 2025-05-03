@@ -45,8 +45,6 @@ class HabitDetails extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Text('Habit: $habitName', style: const TextStyle(fontSize: 20.0)),
-            // const SizedBox(height: 16.0),
             Text(
               'Completed Days: ${completedDays.length}',
               style: const TextStyle(fontSize: 18.0),
